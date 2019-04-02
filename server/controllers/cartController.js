@@ -2,7 +2,7 @@ const swag = require('../models/swag')
 
 module.exports = {
     add: (req, res) => {
-        const { id } = req.params
+        const { id } = req.query
         const { user } = req.session
 
         const index = user.cart.findIndex(swag => swag.id == id)
@@ -15,7 +15,7 @@ module.exports = {
         res.status(200).send(user)
     },
     delete: (req, res) => {
-        const { id } = req.params
+        const { id } = req.query
         const { user } = req.session
 
         const index = user.cart.findIndex(swag => swag.id == id)

@@ -31,8 +31,8 @@ app.get('/api/user', ctrlAuth.getUser)
 app.get('/api/swag', ctrlSwag.read )
 
 app.post('/api/cart/checkout', ctrlCart.checkout)
-app.post('/api/cart/:id', ctrlCart.add)
-app.delete('/api/cart/:id', ctrlCart.delete)
+app.post('/api/cart', ctrlCart.add)
+app.delete('/api/cart', ctrlCart.delete)
 
 app.get('/api/search', ctrlSearch.search)
 

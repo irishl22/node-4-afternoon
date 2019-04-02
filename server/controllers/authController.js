@@ -27,7 +27,7 @@ module.exports = {
         const { session } = req
 
         session.destroy()
-        res.send(session)
+        res.send(req.session)
     },
     getUser: (req, res) => {
         const { session } = req
